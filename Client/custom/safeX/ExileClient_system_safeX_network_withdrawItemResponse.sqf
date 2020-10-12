@@ -1,16 +1,9 @@
-/*
- * ExileClient_system_rewards_network_claimItemResponse
+ /*
  *
- * Rewards Client - Made by Andrew_S90
+ * Author: Andrew_S90
  *
- * Derived from ExileMod Code
+ * This work is protected by Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0). 
  *
- * Exile Mod
- * www.exilemod.com
- * © 2015 Exile Mod Team
- *
- * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
- * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
 private ["_responseCode", "_itemClassName", "_containerType", "_containerNetID", "_vehicle", "_dialog", "_listBox"];

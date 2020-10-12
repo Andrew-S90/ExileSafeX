@@ -28,11 +28,3 @@ forEach
 	['ExileClient_system_safeX_network_withdrawItemResponse','custom\SafeX\ExileClient_system_safeX_network_withdrawItemResponse.sqf'],
 	['ExileClient_system_safeX_network_withdrawVehicleResponse','custom\SafeX\ExileClient_system_safeX_network_withdrawVehicleResponse.sqf']
 ];
-
-_position = worldSize/2;
-_center = [_position,_position,0];
-_lockers = nearestObjects [_center, ["Exile_Locker"], worldSize];
-
-{
-	_x addAction ["<t color='#FF0000'>SafeX Storage</t>", {[] call ExileClient_gui_safeXDialog_show;},"",-4,true ,true ,"","true",3];
-} forEach _lockers;

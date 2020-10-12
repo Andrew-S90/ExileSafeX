@@ -1,16 +1,9 @@
-/*
- * ExileServer_system_rewards_network_withdrawItemRequest
+ /*
  *
- * SafeX Server - Made by Andrew_S90
+ * Author: Andrew_S90
  *
- * Derived from ExileMod Code
+ * This work is protected by Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0). 
  *
- * Exile Mod
- * www.exilemod.com
- * © 2015 Exile Mod Team
- *
- * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
- * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
 
 private ["_sessionID", "_targetUID", "_hasSafeXPlayer", "_parameters", "_itemClassName", "_containerType", "_containerNetID", "_playerObject", "_vehicleObject", "_safeXData", "_index", "_current", "_amt", "_playerUID", "_logging", "_itemLogging", "_traderLog", "_responseCode"];
@@ -26,7 +19,6 @@ try
 	_targetUID = getPlayerUID _playerObject;
 	if (_targetUID isEqualTo "") then 
 	{
-		//throw "getPlayerUID returned an empty string!";
 		throw 5;
 	};
 	if (_playerObject getVariable ["ExileMutex",false]) then
@@ -104,8 +96,7 @@ try
 	if (_logging isEqualTo 1 || _itemLogging  isEqualTo 1) then
 	{
 		_traderLog = format ["PLAYER: ( %1 ) %2 WITHDREW ITEM %3 FROM SAFEX",getPlayerUID _playerObject,_playerObject,_itemClassName];
-		//"extDB2" callExtension format["1:TRADING:%1",_traderLog];
-		"extDB3" callExtension format["1:TRADING:%1",_traderLog];
+		"extDB2" callExtension format["1:TRADING:%1",_traderLog];
 	};
 	if !(_vehicleObject isEqualTo objNull) then
 	{

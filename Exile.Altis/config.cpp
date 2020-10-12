@@ -3914,6 +3914,20 @@ class ExileAbstractAction
  */
 class CfgInteractionMenus
 {
+	class Locker
+	{
+	   targetType = 2;
+	   target = "Exile_Locker";
+		class Actions
+		{
+			class SafeX
+			{
+				title = "SafeX Storage";
+				condition = "player call ExileClient_util_world_isInTraderZone";
+				action = "[] call ExileClient_gui_safeXDialog_show;";
+			};
+		};
+	};
 	class Car 
 	{
 		targetType = 2;

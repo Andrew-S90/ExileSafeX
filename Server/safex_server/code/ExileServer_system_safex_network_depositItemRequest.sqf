@@ -1,16 +1,9 @@
-/*
- * ExileServer_system_rewards_network_depositItemRequest
+ /*
  *
- * SafeX Server - Made by Andrew_S90
+ * Author: Andrew_S90
  *
- * Derived from ExileMod Code
+ * This work is protected by Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0). 
  *
- * Exile Mod
- * www.exilemod.com
- * © 2015 Exile Mod Team
- *
- * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
- * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
  
@@ -25,18 +18,15 @@ try
 	_targetUID = getPlayerUID _playerObject;
 	if (_targetUID isEqualTo "") then 
 	{
-		//throw "getPlayerUID returned an empty string!";
 		throw 1;
 	};
 	if (_classname isEqualTo "") then 
 	{
-		//throw "_classname returned an empty string!";
 		throw 2;
 	};
 	_playerObject = _targetUID call ExileClient_util_player_objectFromPlayerUID;
 	if (isNull _playerObject) then
 	{
-		//throw "Player object is null!";
 		throw 3;
 	};
 	
@@ -71,11 +61,8 @@ try
 	if (_logging isEqualTo 1 || _itemLogging  isEqualTo 1) then
 	{
 		_traderLog = format ["PLAYER: ( %1 ) %2 DEPOSITED ITEM %3 TO SAFEX",getPlayerUID _playerObject,_playerObject,_classname];
-		//"extDB2" callExtension format["1:TRADING:%1",_traderLog];
-		"extDB3" callExtension format["1:TRADING:%1",_traderLog];
+		"extDB2" callExtension format["1:TRADING:%1",_traderLog];
 	};
-	
-	diag_log format["**** safex %1 %2 ", _safeXData, _targetUID];
 	
 	format["setSafeXStorage:%1:%2", _safeXData, _targetUID] call ExileServer_system_database_query_fireAndForget;
 }

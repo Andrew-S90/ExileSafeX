@@ -1,28 +1,12 @@
-/*
- * ExileServer_system_safex_addItem
+ /*
  *
- * SafeX Server - Made by Andrew_S90
+ * Author: Andrew_S90
  *
- * Derived from ExileMod Code
+ * This work is protected by Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0). 
  *
- * Exile Mod
- * www.exilemod.com
- * © 2015 Exile Mod Team
- *
- * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
- * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
 // [getPlayerUID(_playerObject), [_classname]] call ExileServer_system_safex_addItem;
-/*
-ALTER TABLE safex
-ADD marxet_player text;
-
-UPDATE safex
-SET marxet_player = '[]';
-
-
-*/
 
  
 private ["_playerUID", "_targetPlayerObject", "_targetSessionID", "_rewardsData", "_hasRewardsPlayer", "_targetUID", "_responseCode", "_bad"];
@@ -116,8 +100,7 @@ try
 	if (_logging isEqualTo 1 || _itemLogging  isEqualTo 1) then
 	{
 		_traderLog = format ["PLAYER: ( %1 ) HAD MARXET ITEM %2 DEPOSITED TO SAFEX",getPlayerUID _targetPlayerObject,_playerMarXet];
-		//"extDB2" callExtension format["1:TRADING:%1",_traderLog];
-		"extDB3" callExtension format["1:TRADING:%1",_traderLog];
+		"extDB2" callExtension format["1:TRADING:%1",_traderLog];
 	};
 	_targetSessionID = _targetPlayerObject getVariable ["ExileSessionID", -1];
 	

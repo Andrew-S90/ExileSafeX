@@ -1,16 +1,9 @@
-/*
- * ExileClient_gui_safeXDialog_event_onClaimButtonClick
+ /*
  *
- * Rewards Client - Made by Andrew_S90
+ * Author: Andrew_S90
  *
- * Derived from ExileMod Code
+ * This work is protected by Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0). 
  *
- * Exile Mod
- * www.exilemod.com
- * © 2015 Exile Mod Team
- *
- * This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. 
- * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
 private ["_dialog", "_inventoryLB", "_deposit", "_withdraw", "_selectedInventoryLBIndex", "_itemClassName", "_mass", "_retardCheck", "_itemType"];
