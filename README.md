@@ -3,7 +3,7 @@ Private inventory at traders. Customizable size that can increase with respect i
 Required for MarXet 2
 
 
-Showcase video: 
+Showcase video: https://www.youtube.com/watch?v=Wbb_wUnIj-0
 
 This was developed on a test server with EXTDB2, no infistar and no battleye.
 
